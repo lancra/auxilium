@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup Label="Shared">
+    <PackageVersion Include="Autofac" Version="7.1.0" />
     <PackageVersion Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556" />
   </ItemGroup>
 
@@ -17,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup Label="Tools">
+    <PackageVersion Include="Bullseye" Version="4.2.1" />
     <PackageVersion Include="MinVer" Version="4.3.0" />
+    <PackageVersion Include="SimpleExec" Version="11.0.0" />
   </ItemGroup>
 
 </Project>

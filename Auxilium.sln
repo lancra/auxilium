@@ -19,12 +19,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB9FEE33-2026-40F1-A732-7F0300DDB6FD}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{34CB80F1-E15C-4660-BE56-4B36C86948A0}"
 	ProjectSection(SolutionItems) = preProject
 		tests\Directory.Build.props = tests\Directory.Build.props
 		tests\TestingSuppressions.cs = tests\TestingSuppressions.cs
 		tests\xunit.runner.json = tests\xunit.runner.json
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{8EC2A0B9-95AD-4533-85FC-747C0105F2A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auxilium.Build", "tools\Auxilium.Build\Auxilium.Build.csproj", "{CF3ECA09-E134-4E34-88BF-A4EA064E66FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF3ECA09-E134-4E34-88BF-A4EA064E66FE} = {8EC2A0B9-95AD-4533-85FC-747C0105F2A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF42FC9F-93F1-4E05-889D-53283734AA2A}
