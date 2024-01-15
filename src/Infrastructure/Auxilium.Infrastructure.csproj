@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Auxilium.Application.csproj" />
+  </ItemGroup>
+
+</Project>

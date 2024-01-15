@@ -4,6 +4,11 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
+  <ItemGroup Label="Api">
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
   <ItemGroup Label="Shared">
     <PackageVersion Include="Autofac" Version="7.1.0" />
     <PackageVersion Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556" />
