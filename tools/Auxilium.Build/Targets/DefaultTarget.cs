@@ -6,5 +6,5 @@ internal class DefaultTarget : IBuildTarget
         => targets.Add(
             BuildTargets.Default,
             "Executes the complete build process.",
-            Bullseye.Targets.DependsOn(BuildTargets.Publish));
+            Bullseye.Targets.DependsOn(BuildTargets.Publish, BuildTargets.Test));
 }
