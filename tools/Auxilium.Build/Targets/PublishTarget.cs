@@ -13,6 +13,7 @@ internal class PublishTarget : IBuildTarget
             async project => await DotnetCli
                 .RunAsync(
                     $"publish {project.Path}",
+                    "--no-build",
                     $"--output {string.Format(ArtifactPaths.PublishedExecutableFormat, project.Name)}")
                 .ConfigureAwait(false));
 }

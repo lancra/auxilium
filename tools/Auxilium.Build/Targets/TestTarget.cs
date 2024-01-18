@@ -25,6 +25,7 @@ internal class TestTarget : IBuildTarget
                 async project => await DotnetCli
                     .RunAsync(
                         $"test {project.Path}",
+                        "--no-build",
                         $"--results-directory {string.Format(ArtifactPaths.TestResultFormat, project.Name)}",
                         "--collect \"XPlat Code Coverage\"",
                         "--logger trx")
