@@ -7,6 +7,7 @@ internal static class BuildTargets
 
     public const string Clean = "clean";
     public const string Dotnet = "dotnet";
+    public const string Lint = "lint";
     public const string Publish = "publish";
     public const string TestIntegration = "test.integration";
     public const string TestUnit = "test.unit";
