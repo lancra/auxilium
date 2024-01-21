@@ -1,8 +1,8 @@
 using static SimpleExec.Command;
 
-namespace Auxilium.Build.Targets;
+namespace Auxilium.Dev.Targets;
 
-internal class LintTarget : IBuildTarget
+internal class LintTarget : ITarget
 {
     private static readonly bool FixLinterIssues = Environment.GetEnvironmentVariable("AUXILIUM_FIX_LINT") == "1";
 
@@ -14,7 +14,7 @@ internal class LintTarget : IBuildTarget
 
     public void Setup(Bullseye.Targets targets)
         => targets.Add(
-            BuildTargets.Lint,
+            DevTargets.Lint,
             "Flags stylistic and functional issues via static code analysis tools.",
             forEach: Linters,
             async linter => await RunAsync(linter.Executable, FixLinterIssues ? linter.FixArguments : linter.CheckArguments)

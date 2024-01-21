@@ -1,4 +1,4 @@
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
 internal record TestSuite(string Name, string Description, TestProject[] Projects)
 {

@@ -1,4 +1,4 @@
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
 internal record Linter(string Name, string Executable, string CheckArguments, string FixArguments)
 {

@@ -44,7 +44,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auxilium.IntegrationTests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{8EC2A0B9-95AD-4533-85FC-747C0105F2A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auxilium.Build", "tools\Auxilium.Build\Auxilium.Build.csproj", "{CF3ECA09-E134-4E34-88BF-A4EA064E66FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auxilium.Dev", "tools\Auxilium.Dev\Auxilium.Dev.csproj", "{CF3ECA09-E134-4E34-88BF-A4EA064E66FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

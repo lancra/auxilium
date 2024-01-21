@@ -1,4 +1,4 @@
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
 internal static class DotnetCli
 {

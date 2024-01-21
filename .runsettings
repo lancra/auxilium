@@ -14,7 +14,7 @@
                 <ModulePath>.*\\Auxilium.*\.dll$</ModulePath>
               </Include>
               <Exclude>
-                <ModulePath>.*Build.dll</ModulePath>
+                <ModulePath>.*Dev.dll</ModulePath>
                 <ModulePath>.*Facts.dll</ModulePath>
                 <ModulePath>.*Tests.dll</ModulePath>
               </Exclude>

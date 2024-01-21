@@ -1,16 +1,16 @@
 using Autofac;
-using Auxilium.Build.Targets;
+using Auxilium.Dev.Targets;
 
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
-internal static class BuildStartup
+internal static class DevStartup
 {
     public static IContainer BuildContainer()
     {
         var builder = new ContainerBuilder();
 
         builder.RegisterAssemblyTypes(System.Reflection.Assembly.GetExecutingAssembly())
-            .AssignableTo<IBuildTarget>()
+            .AssignableTo<ITarget>()
             .AsImplementedInterfaces()
             .InstancePerLifetimeScope();
 

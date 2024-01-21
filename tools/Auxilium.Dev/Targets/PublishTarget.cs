@@ -1,14 +1,14 @@
-namespace Auxilium.Build.Targets;
+namespace Auxilium.Dev.Targets;
 
-internal class PublishTarget : IBuildTarget
+internal class PublishTarget : ITarget
 {
     private static readonly ExecutableProject[] Projects = [new("api", "src/Api")];
 
     public void Setup(Bullseye.Targets targets)
         => targets.Add(
-            BuildTargets.Publish,
+            DevTargets.Publish,
             "Publishes executable projects and dependencies to a folder for deployment.",
-            Bullseye.Targets.DependsOn(BuildTargets.Dotnet),
+            Bullseye.Targets.DependsOn(DevTargets.Dotnet),
             forEach: Projects,
             async project => await DotnetCli
                 .RunAsync(

@@ -1,9 +1,9 @@
-namespace Auxilium.Build.Targets;
+namespace Auxilium.Dev.Targets;
 
 /// <summary>
-/// Represents a target execution within the build process.
+/// Represents a target task execution.
 /// </summary>
-internal interface IBuildTarget
+internal interface ITarget
 {
     /// <summary>
     /// Performs setup necessary to include the target into a collection.

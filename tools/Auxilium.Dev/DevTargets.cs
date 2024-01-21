@@ -1,6 +1,6 @@
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
-internal static class BuildTargets
+internal static class DevTargets
 {
     public const string Default = "default";
     public const string Test = "test";

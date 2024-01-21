@@ -1,4 +1,4 @@
-namespace Auxilium.Build;
+namespace Auxilium.Dev;
 
 internal record ExecutableProject(string Name, string Path)
 {

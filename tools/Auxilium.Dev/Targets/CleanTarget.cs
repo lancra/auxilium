@@ -1,10 +1,10 @@
-namespace Auxilium.Build.Targets;
+namespace Auxilium.Dev.Targets;
 
-internal class CleanTarget : IBuildTarget
+internal class CleanTarget : ITarget
 {
     public void Setup(Bullseye.Targets targets)
         => targets.Add(
-            BuildTargets.Clean,
+            DevTargets.Clean,
             "Cleans build artifacts from prior executions.",
             async () => await DotnetCli.RunAsync("clean")
             .ConfigureAwait(false));
