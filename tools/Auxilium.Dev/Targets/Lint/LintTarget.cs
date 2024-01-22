@@ -1,6 +1,6 @@
 using static SimpleExec.Command;
 
-namespace Auxilium.Dev.Targets;
+namespace Auxilium.Dev.Targets.Lint;
 
 internal class LintTarget : ITarget
 {
@@ -14,7 +14,7 @@ internal class LintTarget : ITarget
 
     public void Setup(Bullseye.Targets targets)
         => targets.Add(
-            DevTargets.Lint,
+            LintTargets.Lint,
             "Flags stylistic and functional issues via static code analysis tools.",
             forEach: Linters,
             async linter => await RunAsync(linter.Executable, FixLinterIssues ? linter.FixArguments : linter.CheckArguments)

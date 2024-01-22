@@ -1,14 +1,14 @@
-namespace Auxilium.Dev.Targets;
+namespace Auxilium.Dev.Targets.Build;
 
 internal class TestTarget : ITarget
 {
     private static readonly TestSuite[] Suites = [
         new(
-            DevTargets.TestIntegration,
+            BuildTargets.TestIntegration,
             "Tests integrations between components of the system.",
             [new("integration", "tests/IntegrationTests"),]),
         new(
-            DevTargets.TestUnit,
+            BuildTargets.TestUnit,
             "Tests individual components of the system.",
             [new("api", "tests/Api.Facts"), new("domain", "tests/Domain.Facts"),]),
     ];
@@ -20,7 +20,7 @@ internal class TestTarget : ITarget
             targets.Add(
                 suite.Name,
                 suite.Description,
-                Bullseye.Targets.DependsOn(DevTargets.Dotnet),
+                Bullseye.Targets.DependsOn(BuildTargets.Dotnet),
                 forEach: suite.Projects,
                 async project => await DotnetCli
                     .RunAsync(
@@ -33,7 +33,7 @@ internal class TestTarget : ITarget
         }
 
         targets.Add(
-            DevTargets.Test,
+            BuildTargets.Test,
             "Executes automated test suites.",
             Bullseye.Targets.DependsOn(Suites.Select(s => s.Name)
                 .ToArray()));

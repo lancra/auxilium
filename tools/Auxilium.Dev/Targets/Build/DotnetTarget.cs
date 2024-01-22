@@ -1,12 +1,12 @@
-namespace Auxilium.Dev.Targets;
+namespace Auxilium.Dev.Targets.Build;
 
 internal class DotnetTarget : ITarget
 {
     public void Setup(Bullseye.Targets targets)
         => targets.Add(
-            DevTargets.Dotnet,
+            BuildTargets.Dotnet,
             "Builds the solution into a set of output binaries.",
-            Bullseye.Targets.DependsOn(DevTargets.Clean),
+            Bullseye.Targets.DependsOn(BuildTargets.Clean),
             async () => await DotnetCli.RunAsync("build", "/warnaserror")
             .ConfigureAwait(false));
 }
